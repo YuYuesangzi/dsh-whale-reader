@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Whale Reader",
+    "description": "Keeps books as local files, gives the agent tools to list, search, read by section and save progress, and adds a native settings panel with chapters, progress and search.",
+    "detail": "docs/DETAIL.md"
+  }
+}

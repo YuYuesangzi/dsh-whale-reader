@@ -1,0 +1,54 @@
+{
+  "name": "@local/dsh-whale-reader",
+  "version": "0.1.8",
+  "private": true,
+  "type": "module",
+  "description": "Local-file reader for DSH: agent tools plus a native settings panel with chapters, progress and search.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "lib",
+    "data",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "mammoth": "^1.9.0",
+    "pdfjs-dist": "^4.10.38"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "reader",
+    "epub",
+    "local-first"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuYuesangzi/dsh-whale-reader.git"
+  }
+}
